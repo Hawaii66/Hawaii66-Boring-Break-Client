@@ -66,7 +66,6 @@ function SpeedMathMain() {
 
     console.log(socket)
 
-
     if (currentState === 0) { // Select difficulty
         if (isAdmin) {
             return (
