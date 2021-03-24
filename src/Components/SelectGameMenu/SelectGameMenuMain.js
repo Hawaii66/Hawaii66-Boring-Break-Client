@@ -38,7 +38,7 @@ function SelectGameMenuMain({ isAdmin }) {
             <h2>Comming Soon</h2>
             <div className="CommingSoonGames">
                 {/*<p>Not working on any game at the moment</p>
-                <p>Planned games are: Math, love o meter</p>*/}
+                <p>Planned games are: Wiki race and spotifys</p>*/}
                 
                 <Card
                     name="Speed Math: BETA"
