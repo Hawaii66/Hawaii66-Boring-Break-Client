@@ -128,7 +128,7 @@ function SpeedMathMain() {
                 })}
             </div>
             <div className="HomeButton">
-                <button onClick={() => { window.open("http://localhost:3000/", "_self") }}>HOME</button>
+                <button onClick={() => { window.open("https://server-question-game.herokuapp.com/", "_self") }}>HOME</button>
             </div>
         </div>
     )
