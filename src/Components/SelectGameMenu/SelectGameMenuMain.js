@@ -26,6 +26,12 @@ function SelectGameMenuMain({ isAdmin }) {
                     imageAlt="1 truth 2 lies"
                     index={0}
                 />
+                <Card
+                    name="Love O Meter"
+                    imageSrc="https://cdn5.vectorstock.com/i/thumb-large/94/04/love-meter-heart-indicator-day-full-test-vector-29309404.jpg"
+                    imageAlt="Love O Meter"
+                    index={1}
+                />
 
             </div>
             <div className="Bar"></div>
@@ -33,14 +39,9 @@ function SelectGameMenuMain({ isAdmin }) {
             <div className="CommingSoonGames">
                 {/*<p>Not working on any game at the moment</p>
                 <p>Planned games are: Math, love o meter</p>*/}
+                
                 <Card
-                    name="Love O Meter: BETA"
-                    imageSrc="https://cdn5.vectorstock.com/i/thumb-large/94/04/love-meter-heart-indicator-day-full-test-vector-29309404.jpg"
-                    imageAlt="Love O Meter"
-                    index={1}
-                />
-                <Card
-                    name="Speed Math: Developing"
+                    name="Speed Math: BETA"
                     imageSrc="https://img2.apksum.com/3e/com.jancy.layagame.math/1.7/icon.png"
                     imageAlt="Speed Math"
                     index={2}
