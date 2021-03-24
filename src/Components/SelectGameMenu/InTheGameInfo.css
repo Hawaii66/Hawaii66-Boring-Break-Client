@@ -1,0 +1,19 @@
+.YouAreIn {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.YouAreIn h1 {
+    color: #c0392b;
+    font-weight: 1000;
+    font-size: 50px;
+}
+
+.YouAreIn p {
+    color: paleturquoise;
+    text-shadow: 1px 1px 0.5 black;
+    font-weight: 400;
+    font-size: 32px;
+}

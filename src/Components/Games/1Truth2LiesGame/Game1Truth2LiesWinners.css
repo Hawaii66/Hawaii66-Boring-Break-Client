@@ -1,0 +1,33 @@
+.Winners {
+    position: relative;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    height: 50%;
+    margin-top: 10%;
+    margin-bottom: 25%;
+    text-align: center;
+}
+
+.Winners h1 {
+    font-size: 50px;
+    font-weight: 1000;
+    text-decoration: black underline solid;
+}
+
+.Winners h2 {
+    font-size: 35px;
+    color: #c0392b;
+}
+
+.Winners button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    width: 5%;
+    height: 5%;
+    background-color: #2980b9;
+    color: whitesmoke;
+}

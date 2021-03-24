@@ -1,0 +1,22 @@
+.Game1T2LQuestionsMain h1,
+p {
+    text-align: center;
+}
+
+.Game1T2LQuestionsMain .Game1T2LQuestions .Game1T2LQuestion {
+    border-style: double;
+    padding: 1em 0em;
+    margin: 1em 1em;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.Game1T2LHasAnswerdQuestion {
+    text-align: center;
+    height: 40%;
+    margin-top: 30%;
+    margin-bottom: 30%;
+    color: paleturquoise;
+}

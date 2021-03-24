@@ -1,0 +1,70 @@
+.Game1T2LLeaderboardMain {
+    width: 40%;
+    height: 90%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.Game1T2LLeaderboardMain .Game1T2LLeaderboardCorrect {
+    text-align: center;
+    background-color: #2980b9;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    border-radius: 5% 5% 5% 5%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    color: #4cd137;
+}
+
+.Game1T2LLeaderboardMain .Game1T2LLeaderboardWrong {
+    text-align: center;
+    background-color: #2980b9;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    border-radius: 5% 5% 5% 5%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    color: #c0392b;
+}
+
+.Game1T2LLeaderboardMain .Game1T2LLeaderboardCurrentPlayer {
+    border-style: double;
+    border-radius: 4%;
+    text-align: center;
+    padding: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #2980b9;
+}
+
+.Game1T2LLeaderboardMain .Game1T2LLeaderboardCurrentPlayer h3 {
+    background-color: #2980b9;
+}
+
+.Game1T2LLeaderboardMain .Game1T2LLeaderboardCurrentPlayer h4 {
+    background-color: #2980b9;
+}
+
+.Game1T2LLeaderboardMain .Game1T2LLeaderboardOtherPlayer {
+    border-style: double;
+    border-radius: 4%;
+    text-align: center;
+    padding: 0.5em 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.Game1T2LLeaderboardMain button {
+    width: 40%;
+    border-radius: 7%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 0.5em 0em;
+    font-size: 20px;
+}

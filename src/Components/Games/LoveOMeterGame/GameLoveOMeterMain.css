@@ -1,0 +1,49 @@
+.GameLOM .CircleChart {
+    margin-top: 4em;
+}
+
+.GameLOM h1 {
+    font-weight: 1500;
+    font-size: 64px;
+    border-style: double;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 0.5em;
+}
+
+.GameLOM form {
+    margin-top: 2em;
+    border-style: double;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.GameLOM form input {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2em;
+    font-size: large;
+    padding: 0.25em 0.25em;
+}
+
+.GameLOM form button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em 1em;
+    background-color: #2980b9;
+}
+
+.GameLOM .HomeButton button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    width: 5%;
+    height: 5%;
+    background-color: #2980b9;
+    color: whitesmoke;
+}

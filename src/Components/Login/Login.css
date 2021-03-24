@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: #3498db;
+}
+
+.LoginTab {
+    width: 50%;
+    height: 40%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -25%;
+    margin-top: -5%;
+    border-radius: 10px;
+    border-width: 4px;
+    border-style: groove;
+}
+
+.LoginHeader {
+    text-align: center;
+    font-weight: 1000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+}
+
+.LoginForm {
+    width: 100%;
+}
+
+#LoginInputName,
+#LoginInputPin {
+    margin-top: 1em;
+    width: 90%;
+    height: 30px;
+    font-size: 24px;
+}
+
+.LoginEnterButton {
+    margin-top: 1em;
+    padding: 1em 1em;
+    background-color: #2980b9;
+}
+
+.GAMEPIN {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0.5em 0.5em
+}
