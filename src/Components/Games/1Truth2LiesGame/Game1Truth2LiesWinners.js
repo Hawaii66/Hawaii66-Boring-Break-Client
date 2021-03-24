@@ -30,7 +30,7 @@ function Game1Truth2LiesWinners({ data }) {
                 })}
             </div>
             <div className="HomeButton">
-                <button onClick={() => { window.open("https://server-question-game.herokuapp.com/", "_self") }}>HOME</button>
+                <button onClick={() => { window.open("https://boringbreak.netlify.app", "_self") }}>HOME</button>
             </div>
         </div>
     )

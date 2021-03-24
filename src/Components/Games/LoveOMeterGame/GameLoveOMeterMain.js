@@ -101,7 +101,7 @@ function GameLoveOMeterMain() {
                 <button >Calculate</button>
             </form>
             <div className="HomeButton">
-                <button onClick={() => { window.open("https://server-question-game.herokuapp.com/s", "_self") }}>HOME</button>
+                <button onClick={() => { window.open("https://boringbreak.netlify.app", "_self") }}>HOME</button>
             </div>
         </div>
 
