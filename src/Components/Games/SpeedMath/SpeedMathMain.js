@@ -26,6 +26,7 @@ function SpeedMathMain() {
     const [currentQuestion, setCurrentQuestion] = useState(""); //Question = string
     const [correctAnswer, setCorrectAnswer] = useState(0);  // Answer = number
     const [isAdmin, setIsAdmin] = useState(false);
+    const [winnerData, setWinnerData] = useState();
 
     const setAnswer = (event) => {
         event.preventDefault()
@@ -61,6 +62,11 @@ function SpeedMathMain() {
             setCurrentQuestion(data.problem);
             setCorrectAnswer(data.answer);
             console.log(data);
+        });
+        socket.on("GameSpeedMathWinners", (data)=>{
+            console.log(data);
+            setWinnerData(data);
+            setCurrentState(3);
         });
     }, []);
 
@@ -102,8 +108,29 @@ function SpeedMathMain() {
         )
     }
     return ( // Other
-        <>
-        </>
+        <div>
+            <div className="GameSMWinners">
+                {winnerData.winners.map((item, index) =>{
+                    return(
+                        <h1 key={index.toString()}>{item.name}</h1>
+                    )
+                })}
+            </div>
+            <div className="GameSMResults">
+                {winnerData.results.map((item, index)=>{
+                    return(
+                        <div className="GameSMResultsQuestion" key={index.toString()}>
+                            <h1>{item.question.problem}</h1>
+                            <p>{item.correctAnswer}</p>
+                            <p>{item.myAnswer}</p>
+                        </div>
+                    )
+                })}
+            </div>
+            <div className="HomeButton">
+                <button onClick={() => { window.open("http://localhost:3000/", "_self") }}>HOME</button>
+            </div>
+        </div>
     )
 }
 
