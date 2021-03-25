@@ -5,13 +5,10 @@ import GameSpeedMathQuestion from "./GameSpeedMathQuestion.js"
 import { socket } from "../../../Socket/socketEmit.js";
 import InGame from '../../SelectGameMenu/InTheGameInfo.js'
 import { GameSpeedMathStartGame, GameIsAdmin, GameSpeedMathSubmitAnswer } from "../../../Socket/socketEmit.js";
+import GameLoading from "../GameLoading.jsx";
 
 const StartGame = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const difficulty = formData.get("difficulty");
-    console.log(difficulty);
-    GameSpeedMathStartGame(difficulty);
+    
 }
 
 const checkIfIsAdmin = (callback) => {
@@ -38,7 +35,18 @@ function SpeedMathMain() {
             answer
         }
         event.target.reset();
+        //setCurrentState(4);
         GameSpeedMathSubmitAnswer(toSend);
+    }
+
+    const startGame = (event) => {
+        console.log("KHKSDHGKSJDHGKSDHGKSDHGKHSDGK");
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const difficulty = formData.get("difficulty");
+        console.log(difficulty);
+        setCurrentState(4);
+        GameSpeedMathStartGame(difficulty);
     }
 
     checkIfIsAdmin((data) => {
@@ -49,6 +57,7 @@ function SpeedMathMain() {
         socket.on("GameSpeedMathShowQuestion", (data) => {
             //Data = Question,  Question = Problem, answer
             setCurrentState(1);
+            console.log(currentState);
             setCurrentQuestion(data.question.problem);
             setCorrectAnswer(data.question.answer);
             console.log(data);
@@ -70,14 +79,12 @@ function SpeedMathMain() {
         });
     }, []);
 
-    console.log(socket)
-
     if (currentState === 0) { // Select difficulty
         if (isAdmin) {
             return (
                 <div>
                     <h1>Select Difficulty</h1>
-                    <form onSubmit={StartGame}>
+                    <form onSubmit={startGame}>
                         <select name="difficulty">
                             <option value="1">Easy</option>
                             <option value="2">Normal</option>
@@ -107,29 +114,36 @@ function SpeedMathMain() {
             </div>
         )
     }
-    return ( // Other
+    if(currentState === 3){
+        return ( // Other
+            <div>
+                <div className="GameSMWinners">
+                    {winnerData.winners.map((item, index) =>{
+                        return(
+                            <h1 key={index.toString()}>{item.name}</h1>
+                        )
+                    })}
+                </div>
+                <div className="GameSMResults">
+                    {winnerData.results.map((item, index)=>{
+                        return(
+                            <div className="GameSMResultsQuestion" key={index.toString()}>
+                                <h1>{item.question.problem}</h1>
+                                <p>{item.correctAnswer}</p>
+                                <p>{item.myAnswer}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+                <div className="HomeButton">
+                    <button onClick={() => { window.open("https://boringbreak.netlify.app", "_self") }}>HOME</button>
+                </div>
+            </div>
+        )
+    }
+    return(
         <div>
-            <div className="GameSMWinners">
-                {winnerData.winners.map((item, index) =>{
-                    return(
-                        <h1 key={index.toString()}>{item.name}</h1>
-                    )
-                })}
-            </div>
-            <div className="GameSMResults">
-                {winnerData.results.map((item, index)=>{
-                    return(
-                        <div className="GameSMResultsQuestion" key={index.toString()}>
-                            <h1>{item.question.problem}</h1>
-                            <p>{item.correctAnswer}</p>
-                            <p>{item.myAnswer}</p>
-                        </div>
-                    )
-                })}
-            </div>
-            <div className="HomeButton">
-                <button onClick={() => { window.open("https://boringbreak.netlify.app", "_self") }}>HOME</button>
-            </div>
+            <GameLoading/>
         </div>
     )
 }
