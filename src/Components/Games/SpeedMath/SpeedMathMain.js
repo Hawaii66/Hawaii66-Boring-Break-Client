@@ -7,11 +7,8 @@ import InGame from '../../SelectGameMenu/InTheGameInfo.js'
 import { GameSpeedMathStartGame, GameIsAdmin, GameSpeedMathSubmitAnswer } from "../../../Socket/socketEmit.js";
 import GameLoading from "../GameLoading.jsx";
 
-const StartGame = (event) => {
-    
-}
-
 const checkIfIsAdmin = (callback) => {
+    console.log("Checking if is Admin");
     GameIsAdmin((data) => {
         console.log(data);
         callback(data);
@@ -56,6 +53,7 @@ function SpeedMathMain() {
     useEffect(() => {
         socket.on("GameSpeedMathShowQuestion", (data) => {
             //Data = Question,  Question = Problem, answer
+            console.log("Showing first quuestion");
             setCurrentState(1);
             console.log(currentState);
             setCurrentQuestion(data.question.problem);
@@ -63,16 +61,19 @@ function SpeedMathMain() {
             console.log(data);
         });
         socket.on("GameSpeedMathHasAnswered", (data) => {
+            console.log("Has answered all questions");
             console.log(data);
             setCurrentState(2);
         });
         socket.on("GameSpeedMathNextQuestion", (data) => {
+            console.log("Resived netxt question");
             setCurrentState(1);
             setCurrentQuestion(data.problem);
             setCorrectAnswer(data.answer);
             console.log(data);
         });
         socket.on("GameSpeedMathWinners", (data)=>{
+            console.log("Resived a winner");
             console.log(data);
             setWinnerData(data);
             setCurrentState(3);
