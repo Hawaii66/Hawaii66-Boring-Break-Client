@@ -53,5 +53,5 @@ export function GameIsAdmin(callback) {
 }
 
 export function GameSpeedMathSubmitAnswer(data) {
-    socket.emit("GameSpeedMathSubmitAnswer", (data));
+    socket.emit("GameSpeedMathSubmitAnswer",data);
 }
