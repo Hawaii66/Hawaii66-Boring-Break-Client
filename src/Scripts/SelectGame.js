@@ -15,7 +15,7 @@ export function ChooseGame(index) {
             console.log("TES");
         });
     }
-    if (index === 1 || index === 2) {
+    if (index === 1 || index === 2 || index === 3) {
         currentGameIndex = index;
         const toSend = {
             gameIndex: currentGameIndex

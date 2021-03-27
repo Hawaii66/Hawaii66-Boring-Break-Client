@@ -1,7 +1,7 @@
 import socketIOClient from "socket.io-client";
 
-export var socket = socketIOClient.io.connect("https://server-question-game.herokuapp.com/");
-//export var socket = socketIOClient.io.connect("http://localhost:5000/");
+//export var socket = socketIOClient.io.connect("https://server-question-game.herokuapp.com/");
+export var socket = socketIOClient.io.connect("http://localhost:5000/");
 console.log(socket);
 
 export function JoinServer(data, callback) {
@@ -53,5 +53,5 @@ export function GameIsAdmin(callback) {
 }
 
 export function GameSpeedMathSubmitAnswer(data) {
-    socket.emit("GameSpeedMathSubmitAnswer",data);
+    socket.emit("GameSpeedMathSubmitAnswer", data);
 }

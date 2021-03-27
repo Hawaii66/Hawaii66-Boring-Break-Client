@@ -1,0 +1,35 @@
+.SpotifySongIframe {
+    margin-top: 0.5em;
+}
+
+.circle {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle select {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    height: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    background-color: inherit;
+    display: inline-block;
+    text-align: center;
+}
+
+.SpotifyGuessArrowParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SpotifyGuessArrow {
+    font-size: 40px;
+}

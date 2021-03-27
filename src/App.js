@@ -25,6 +25,7 @@ function App() {
     useEffect(() => {
         let socket1 = socket;
         socket1.on("ShowGame", (data) => {
+            console.log("Play a game");
             ShowGames(data, (newState) => {
                 setShowLogin(!newState.bool);
                 setSelectGameMenu(!newState.bool);
@@ -74,6 +75,7 @@ function App() {
             {/* showGame ? <Game1T2L /> : null*/}
             { showGame ? <GamePreloader gameIndex={currentGameIndex} /> : null}
         </div>
+        
     );
 }
 
