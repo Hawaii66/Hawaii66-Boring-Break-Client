@@ -95,14 +95,6 @@ function SpotifyGuessMain() {
             </div>
             <div className={spotifyTracksDir ? "SpotifySongsTB" : "SpotifySongsRL"}>
                 {sortedSpotifyTracks && sortedSpotifyTracks.map((item,index)=>{
-                    /*const url = "https://open.spotify.com/embed/track/" + item.track.id.toString();
-                    return (
-                        <div className="SpotifySong" key={index}>
-                            <h1>{index + 1}</h1>
-                            <iframe className="SpotifySongIframe" src={url} width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                            <SpotifyGuessPointScore index={index} clicked={clickedArrow}/>
-                        </div>
-                    )*/
                     return(
                         <div className={spotifyTracksDir ? "SpotifySongTB" : "SpotifySongRL"} key={index}>
                         <h1>{index + 1}</h1>

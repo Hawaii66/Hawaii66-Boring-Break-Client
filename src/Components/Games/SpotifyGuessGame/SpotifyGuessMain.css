@@ -1,9 +1,3 @@
-/*.SpotifySongs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
-
 .SpotifySongsTB {}
 
 .SpotifySongTB {
@@ -23,5 +17,9 @@
 
 .SpotifySongRL {
     width: 20%;
-    border-style: solid;
+    /*border-style: solid;*/
+}
+
+.SpotifySongsTB h1 {
+    order: 5;
 }
